@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 // 原有前端页面
 import AssistantPage from '../views/AssistantPage.vue'
 import AppsPage from '../views/AppsPage.vue'
+import SkillStudio from '../views/SkillStudio.vue' // Updated
+import SkillEditor from '../views/SkillEditor.vue'
+import ScenarioCreate from '../views/ScenarioCreate.vue' // Added
 import WorkbenchPage from '../views/WorkbenchPage.vue'
 import HomePage from '../views/HomePage.vue'
 import AboutPage from '../views/AboutPage.vue'
@@ -33,19 +36,36 @@ const routes = [
   { path: '/about', component: AboutPage },
   { path: '/image-gen', component: TextToImage },
   { path: '/image-edit', component: ImageEditor },
-  {path: '/essay',name: 'EssayScoring',component: EssayScoring},
+  { path: '/essay', name: 'EssayScoring', component: EssayScoring },
   { path: '/exam', component: ExamGenerator }, // ID: 3
   { path: '/ppt', component: PptGenerator },
   { path: '/lesson-plan', component: LessonPlan },
   { path: '/portfolio', component: StudentPortfolio }, // 新增
-  { path: '/classroom', component: ClassroomApps }, // 新增路由
+  {
+    path: '/studio',
+    name: 'SkillStudio',
+    component: SkillStudio
+  },
+  {
+    path: '/create-scenario',
+    name: 'ScenarioCreate',
+    component: ScenarioCreate
+  },
+  {
+    path: '/skill-editor/:id?',
+    name: 'SkillEditor',
+    component: SkillEditor
+  },
+  {
+    path: '/classroom', component: ClassroomApps
+  }, // 新增路由
   { path: '/homework-correction', component: HomeworkCorrection },
   { path: '/test', component: TestPanelest },
   // 注册路由
-{ 
-    path: '/decibel', 
-    name: 'DecibelMeter', 
-    component: DecibelMeter 
+  {
+    path: '/decibel',
+    name: 'DecibelMeter',
+    component: DecibelMeter
   },
   // 后台登录页独立显示
   { path: '/admin/login', component: AdminLogin },
@@ -59,7 +79,7 @@ const routes = [
       { path: 'users', component: AdminUsers },
       { path: 'settings', component: AdminSettings },
       { path: '', redirect: '/admin/dashboard' }// 默认子路由
-      
+
     ]
   }
 ]

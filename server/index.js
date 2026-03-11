@@ -14,13 +14,14 @@ import AppDialogues from "./models/AppDialogues.js";
 import bodyParser from "body-parser";
 import { registerFileRoutes } from "./fileRoutes.js";
 import { registerDSChatAppRoutes } from "./DSChatApp.js"; // 新增
+import skillRoutes from "./routes/skillRoutes.js"; // Import skill routes
 
 // ✅ 创建 Express 实例
 const app = express();
 // CORS 允许所有来源访问
 app.use(cors({
   origin: '*',
-  methods: ['GET', 'POST', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Added PUT, DELETE
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 // ✅ 使用中间件
@@ -32,6 +33,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 // ✅ 注册文件上传/DeepSeek路由
 registerFileRoutes(app);
 registerDSChatAppRoutes(app); // 新增挂载
+app.use('/api/skills', skillRoutes); // Register skill routes
 
 // 2. 配置 DeepSeek API
 const openai = new OpenAI({

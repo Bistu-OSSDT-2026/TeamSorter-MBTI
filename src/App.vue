@@ -2,7 +2,7 @@
   <div id="app" class="app-wrapper">
     
     <div v-if="!hasAccess" class="invitation-overlay">
-      <h1 style="display:none">讯科教师 AI 平台 - 智能课件生成与备课助手</h1>
+      <h1 style="display:none">AI Agent 技能库搭建平台 - 智能课件生成与备课助手</h1>
   <p style="display:none">提供教案设计、试题生成、课堂 AI 互动等专业教师办公工具。</p>
       <div class="invitation-box">
         <div class="lock-icon">🔒</div>
@@ -26,7 +26,7 @@
     <header class="app-header">
       <div class="header-left">
         <img :src="logoImage" class="logo-img" alt="Logo" />
-        <div class="logo-text">讯科教师 AI 平台</div>
+        <div class="logo-text">AI Agent 技能库搭建平台</div>
       </div>
       
       <div class="header-right">
@@ -50,7 +50,7 @@
 
     <template v-else>
       <el-button round class="glass-btn" @click="showLogin = true">登录</el-button>
-      <el-button round type="warning" class="register-btn" @click="showRegister = true">注册账号</el-button>
+      <el-button round type="success" class="register-btn" @click="showRegister = true">注册账号</el-button>
     </template>
 
   </div>
@@ -59,21 +59,30 @@
 
     <div class="main-layout">
       <aside class="sidebar">
-        <nav class="nav-menu">
-          <router-link 
-            v-for="item in menuItems" 
-            :key="item.path" 
-            :to="item.path" 
-            class="nav-item" 
-            active-class="active"
+        <!-- Resource Explorer Tree -->
+        <div class="resource-explorer">
+          <div class="explorer-header">资源管理器</div>
+          <el-tree
+            :data="treeData"
+            :props="defaultProps"
+            default-expand-all
+            highlight-current
+            @node-click="handleNodeClick"
+            class="custom-tree"
           >
-            <el-icon class="nav-icon"><component :is="item.icon" /></el-icon>
-            <span class="nav-text">{{ item.label }}</span>
-          </router-link>
-        </nav>
-        
+            <template #default="{ node, data }">
+              <span class="custom-tree-node">
+                <el-icon v-if="data.icon" class="tree-icon" :class="{ 'folder-icon': data.children }">
+                  <component :is="data.icon" />
+                </el-icon>
+                <span>{{ node.label }}</span>
+              </span>
+            </template>
+          </el-tree>
+        </div>
+
         <div class="sidebar-footer">
-          <span>v2.0.2 Beta</span>
+          <span>v2.1.0 Beta</span>
         </div>
       </aside>
 
@@ -121,22 +130,101 @@
 </template>
 
 <script setup>
-import logoImage from '@/assets/logo.jpg';
+import logoImage from '@/assets/logo_new.jpg';
 import { ref, onMounted } from "vue"; 
+import { useRouter } from 'vue-router'; // Add useRouter
 import { ElMessage } from "element-plus";
 import { 
-  Odometer, Grid, Monitor, User, InfoFilled, CaretBottom,Platform,
+  Odometer, Grid, Monitor, User, InfoFilled, CaretBottom, Platform, Connection,
+  Folder, Document, Plus, VideoPlay, MagicStick, School, OfficeBuilding
 } from '@element-plus/icons-vue';
 
-// 菜单配置
-const menuItems = [
-  { path: '/', label: '智能助手', icon: Odometer },
-  { path: '/classroom', label: '课堂AI', icon: Platform },
-  { path: '/apps', label: '应用中心', icon: Grid },
-  { path: '/workbench', label: '备课工作台', icon: Monitor },
-  { path: '/home', label: '个人中心', icon: User },
-  { path: '/about', label: '关于平台', icon: InfoFilled },
+const router = useRouter(); // Initialize router
+
+// Resource Tree Data
+const treeData = [
+  {
+    label: '我的智能体 (My Agents)',
+    icon: User,
+    children: [
+      {
+        label: '智慧教育 (Education)',
+        icon: School,
+        children: [
+           {
+            label: '智能助手',
+            icon: Odometer,
+            route: '/'
+          },
+          {
+            label: '课堂AI',
+            icon: Platform,
+            route: '/classroom'
+          },
+          {
+            label: '备课工作台',
+            icon: Monitor,
+            route: '/workbench'
+          }
+        ]
+      },
+      {
+        label: '企业办公 (Enterprise)',
+        icon: OfficeBuilding,
+        children: [
+          {
+            label: '应用中心',
+            icon: Grid,
+            route: '/apps'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Skill编排工坊',
+    icon: Connection,
+    route: '/studio', // Root node goes to studio dashboard
+    children: [
+      {
+        label: '新建Skill流',
+        icon: Plus,
+        action: 'create-skill'
+      },
+      {
+        label: '我的Skill流 (草稿)',
+        icon: Folder,
+        children: [
+          { label: '未命名Skill 1', icon: Document, action: 'edit-skill', id: 1 }
+        ]
+      }
+    ]
+  },
+  {
+    label: '系统设置',
+    icon: Folder,
+    children: [
+      { label: '个人中心', icon: User, route: '/home' },
+      { label: '关于平台', icon: InfoFilled, route: '/about' }
+    ]
+  }
 ];
+
+const defaultProps = {
+  children: 'children',
+  label: 'label'
+};
+
+const handleNodeClick = (data) => {
+  if (data.route) {
+    router.push(data.route);
+  } else if (data.action === 'create-skill') {
+    router.push('/skill-editor');
+  } else if (data.action === 'edit-skill') {
+    router.push(`/skill-editor/${data.id}`);
+  }
+};
+
 
 // --- 状态管理 ---
 const showLogin = ref(false);
@@ -255,6 +343,179 @@ const openIntro = () => {
 };
 </script>
 
+<style>
+:root {
+  --el-color-primary: #8b5cf6;
+  --el-color-primary-light-3: #a78bfa;
+  --el-color-primary-light-5: #c4b5fd;
+  --el-color-primary-light-7: #ddd6fe;
+  --el-color-primary-light-8: #ede9fe;
+  --el-color-primary-light-9: #f5f3ff;
+  --el-color-primary-dark-2: #5b21b6;
+  
+  --bg-color-dark: #f8fafc; /* Reverted to light */
+  --bg-color-panel: #ffffff;
+  --bg-color-card: #ffffff;
+  --text-color-primary: #1e293b;
+  --text-color-secondary: #64748b;
+  --border-color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-primary);
+}
+
+/* Reverted Theme Overrides */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.app-header {
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.glass-btn {
+  /* Reverted glass styles if needed, or standard Element Plus styles */
+}
+
+.main-layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 260px;
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resource-explorer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 0;
+}
+
+.explorer-header {
+  padding: 0 20px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.custom-tree {
+  background: transparent;
+}
+
+.custom-tree-node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.tree-icon {
+  font-size: 16px;
+  color: #64748b;
+}
+.tree-icon.folder-icon {
+  color: #eab308; /* Folder Color */
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.content-area {
+  flex: 1;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0; /* Remove padding to let views control layout */
+}
+
+/* Animations */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.3s ease;
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+</style>
+
 <style scoped>
 /* ================= 🔥 核心修改：透明遮罩样式 ================= */
 .invitation-overlay {
@@ -300,7 +561,7 @@ const openIntro = () => {
 
 .invitation-box h2 {
     margin: 0 0 5px 0;
-    color: #1e3a8a;
+    color: #5b21b6;
     font-size: 20px;
 }
 
@@ -341,7 +602,7 @@ const openIntro = () => {
 .app-header {
   height: 60px;
   flex-shrink: 0;
-  background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+  background: linear-gradient(90deg, #5b21b6 0%, #8b5cf6 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -386,7 +647,7 @@ const openIntro = () => {
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
+  width: 250px;
   height: 100%;
   background: #ffffff;
   border-right: 1px solid #e5e7eb;
@@ -414,19 +675,75 @@ const openIntro = () => {
 .nav-icon { margin-right: 12px; font-size: 18px; transition: transform 0.2s; }
 .nav-item:hover { background: #f1f5f9; color: #1e293b; }
 .nav-item:hover .nav-icon { transform: scale(1.1); }
-.nav-item.active { background: #eff6ff; color: #3b82f6; position: relative; }
+.nav-item.active { background: #f5f3ff; color: #8b5cf6; position: relative; }
 .nav-item.active::before {
   content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
-  height: 20px; width: 3px; background: #3b82f6; border-radius: 0 2px 2px 0;
+  height: 20px; width: 3px; background: #8b5cf6; border-radius: 0 2px 2px 0;
 }
-.sidebar-footer { padding: 16px; text-align: center; color: #cbd5e1; font-size: 12px; border-top: 1px solid #f1f5f9; }
+/* Resource Explorer Styles */
+.resource-explorer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+.explorer-header {
+  padding: 0 20px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.custom-tree {
+  background: transparent;
+  color: #64748b;
+  font-size: 14px;
+}
+
+:deep(.el-tree-node__content) {
+  height: 36px;
+  border-radius: 4px;
+  margin: 0 8px;
+}
+
+:deep(.el-tree-node__content:hover) {
+  background-color: #f1f5f9;
+}
+
+:deep(.el-tree-node.is-current > .el-tree-node__content) {
+  background-color: #eff6ff;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.custom-tree-node {
+  display: flex;
+  align-items: center;
+}
+
+.tree-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+}
 
 /* Content Area */
 .content-area {
   flex: 1;
   position: relative;
   background-color: #f8fafc;
-  background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+  background-image: radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
   height: 100%;
   /* 💡 核心改动：允许溢出滚动 */
   overflow-y: auto; 
