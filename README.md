@@ -77,7 +77,7 @@ npm start
 npm run serve
 ```
 
-也可以在根目录尝试同时启动：
+也可以在根目录尝 试同时启动：
 
 ```bash
 npm run dev
@@ -87,6 +87,16 @@ npm run dev
 
 - 前端：`http://localhost:8080`
 - 后端：`http://localhost:5000`
+
+### 4.标准启动步骤
+1. 确认安装Node.js，环境验证通过
+
+2. 将项目解压至纯英文无空格路径
+
+3. 根目录CMD执行依赖安装：npm install
+
+4. 双击 start.bat 自动开启后端服务与前端开发服务
+
 
 ## 协作约定
 
