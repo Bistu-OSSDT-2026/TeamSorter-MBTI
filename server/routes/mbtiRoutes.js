@@ -93,24 +93,173 @@ router.get("/records", (req, res) => {
   res.json(list);
 });
 
+function calculatePositionMatch(personScores, positionRequirements) {
+  const dims = ['communication', 'collaboration', 'problemSolving', 'projectManagement', 'learningAdaptability', 'responsibility', 'teamwork', 'challenge'];
+  let totalRate = 0;
+  let meetCount = 0;
+  const dimDetails = {};
+  
+  for (const dim of dims) {
+    const personVal = personScores[dim] || 0;
+    const reqVal = positionRequirements[dim] || 6;
+    const rate = reqVal > 0 ? Math.min((personVal / reqVal) * 100, 100) : 0;
+    totalRate += rate;
+    if (personVal >= reqVal) meetCount++;
+    dimDetails[dim] = {
+      score: personVal,
+      required: reqVal,
+      rate: Math.round(rate),
+      meet: personVal >= reqVal
+    };
+  }
+  
+  const avgRate = Math.round(totalRate / dims.length);
+  let level, levelText;
+  if (avgRate >= 90) { level = 'S'; levelText = '完美匹配' }
+  else if (avgRate >= 75) { level = 'A'; levelText = '高度匹配' }
+  else if (avgRate >= 60) { level = 'B'; levelText = '基本匹配' }
+  else if (avgRate >= 45) { level = 'C'; levelText = '待提升' }
+  else { level = 'D'; levelText = '不匹配' }
+  
+  return {
+    rate: avgRate,
+    level,
+    levelText,
+    meetCount,
+    totalDims: dims.length,
+    dimDetails
+  };
+}
+
+router.get("/records/:id/match-position", (req, res) => {
+  const person = store.findById(RECORDS_COL, req.params.id);
+  if (!person) return res.status(404).json({ error: "人员未找到" });
+  
+  const positions = store.findAll(POSITION_DATA_COL);
+  if (!positions.length) return res.status(404).json({ error: "暂无岗位数据" });
+  
+  const matches = positions.map(pos => {
+    const match = calculatePositionMatch(person.scores || {}, pos.requirements || {});
+    return {
+      position: pos,
+      ...match
+    };
+  }).sort((a, b) => b.rate - a.rate);
+  
+  res.json({
+    person: { name: person.name, mbtiType: person.mbtiType, adaptor: person.adaptor },
+    matches,
+    bestMatch: matches[0] || null
+  });
+});
+
+router.post("/records/:id/assign-position", (req, res) => {
+  const { positionId } = req.body;
+  if (!positionId) return res.status(400).json({ error: "请提供岗位ID" });
+  
+  const person = store.findById(RECORDS_COL, req.params.id);
+  if (!person) return res.status(404).json({ error: "人员未找到" });
+  
+  const position = store.findById(POSITION_DATA_COL, positionId);
+  if (!position) return res.status(404).json({ error: "岗位未找到" });
+  
+  const match = calculatePositionMatch(person.scores || {}, position.requirements || {});
+  
+  store.updateById(RECORDS_COL, req.params.id, {
+    assignedPosition: {
+      positionId: position._id,
+      positionName: position.name,
+      icon: position.icon,
+      color: position.color,
+      matchRate: match.rate,
+      level: match.level,
+      levelText: match.levelText
+    }
+  });
+  
+  res.json({
+    message: `成功分配到${position.icon} ${position.name}`,
+    match,
+    position
+  });
+});
+
+router.post("/records/auto-assign-positions", (req, res) => {
+  const records = store.findAll(RECORDS_COL);
+  const positions = store.findAll(POSITION_DATA_COL);
+  
+  if (!positions.length) return res.status(404).json({ error: "暂无岗位数据" });
+  
+  let assignedCount = 0;
+  const results = [];
+  
+  for (const person of records) {
+    const matches = positions.map(pos => {
+      const match = calculatePositionMatch(person.scores || {}, pos.requirements || {});
+      return { position: pos, ...match };
+    }).sort((a, b) => b.rate - a.rate);
+    
+    const bestMatch = matches[0];
+    if (bestMatch && bestMatch.rate >= 45) {
+      store.updateById(RECORDS_COL, person._id, {
+        assignedPosition: {
+          positionId: bestMatch.position._id,
+          positionName: bestMatch.position.name,
+          icon: bestMatch.position.icon,
+          color: bestMatch.position.color,
+          matchRate: bestMatch.rate,
+          level: bestMatch.level,
+          levelText: bestMatch.levelText
+        }
+      });
+      assignedCount++;
+      results.push({
+        name: person.name,
+        mbtiType: person.mbtiType,
+        position: bestMatch.position.name,
+        matchRate: bestMatch.rate,
+        level: bestMatch.level
+      });
+    }
+  }
+  
+  res.json({
+    message: `成功为 ${assignedCount}/${records.length} 人分配岗位`,
+    assignedCount,
+    totalCount: records.length,
+    results
+  });
+});
+
 router.post("/records", (req, res) => {
   const { name, mbtiType, ei, scores, tags, adaptor } = req.body;
   if (!name || !mbtiType || !ei) return res.status(400).json({ error: "姓名、MBTI类型和EI分类为必填项" });
   const defaultScores = { communication: 0, collaboration: 0, problemSolving: 0, projectManagement: 0, learningAdaptability: 0, responsibility: 0, teamwork: 0, challenge: 0 };
-  const item = store.insertOne(RECORDS_COL, { name, mbtiType, ei, scores: scores || defaultScores, tags: tags || [], adaptor: adaptor || '' });
+  const finalScores = scores || defaultScores;
+  const finalAdaptor = adaptor || calculateAdaptor(mbtiType, finalScores);
+  const item = store.insertOne(RECORDS_COL, { name, mbtiType, ei, scores: finalScores, tags: tags || [], adaptor: finalAdaptor });
   res.json(item);
 });
 
 router.put("/records/:id", (req, res) => {
   const { name, mbtiType, ei, scores, tags } = req.body;
+  const record = store.findById(RECORDS_COL, req.params.id);
+  if (!record) return res.status(404).json({ error: "记录未找到" });
+  
   const update = {};
   if (name) update.name = name;
   if (mbtiType) update.mbtiType = mbtiType;
   if (ei) update.ei = ei;
   if (scores) update.scores = scores;
   if (tags) update.tags = tags;
+  
+  if (mbtiType || scores) {
+    const finalType = mbtiType || record.mbtiType;
+    const finalScores = scores || record.scores || {};
+    update.adaptor = calculateAdaptor(finalType, finalScores);
+  }
+  
   const updated = store.updateById(RECORDS_COL, req.params.id, update);
-  if (!updated) return res.status(404).json({ error: "记录未找到" });
   res.json(updated);
 });
 
@@ -125,15 +274,65 @@ router.delete("/records", (req, res) => {
   res.json({ message: "全部数据已清空" });
 });
 
+function calculateAdaptor(mbtiType, scores) {
+  const cleanType = cleanMbtiType(mbtiType);
+  if (!/^[IE][NS][TF][JP]$/.test(cleanType)) return '';
+
+  const averages = computeMbtiAverages();
+  const typeAvg = averages[cleanType];
+  let mbtiResonance = 0;
+  if (typeAvg) {
+    let sum = 0, count = 0;
+    for (const d of DIM_LABELS) {
+      sum += (typeAvg[d] || 0) / 10;
+      count++;
+    }
+    mbtiResonance = count ? +(sum / count).toFixed(4) : 0.5;
+  } else {
+    mbtiResonance = 0.5;
+  }
+
+  const defaultThresholds = {
+    communication: 6, collaboration: 6, problemSolving: 7,
+    projectManagement: 6, learningAdaptability: 6, responsibility: 7,
+    teamwork: 6, challenge: 6
+  };
+
+  let totalRate = 0, dimCount = 0;
+  for (const d of DIM_LABELS) {
+    const personVal = scores[d] || 0;
+    const threshold = defaultThresholds[d] || 6;
+    const rate = threshold > 0 ? Math.min(personVal / threshold, 1) : 0;
+    totalRate += rate;
+    dimCount++;
+  }
+  const wcpaRate = dimCount ? +(totalRate / dimCount).toFixed(4) : 0;
+
+  const tension = calcTension(cleanType, scores);
+  const total = +(mbtiResonance * 0.3 + wcpaRate * 0.5 + tension * 0.2).toFixed(4);
+  const pct = +(total * 100).toFixed(1);
+
+  if (pct >= 85) return '天选共振者';
+  if (pct >= 70) return '高潜适配者';
+  if (pct >= 55) return '可塑协作者';
+  if (pct >= 40) return '风险警示者';
+  return '紧急干预对象';
+}
+
 router.post("/records/import", (req, res) => {
   const { records } = req.body;
   if (!Array.isArray(records) || records.length === 0) return res.status(400).json({ error: "请提供有效的记录列表" });
   const defaultScores = { communication: 0, collaboration: 0, problemSolving: 0, projectManagement: 0, learningAdaptability: 0, responsibility: 0, teamwork: 0, challenge: 0 };
-  const inserted = store.insertMany(RECORDS_COL, records.map(r => ({
-    name: r.name, mbtiType: r.mbtiType, ei: r.ei,
-    scores: r.scores || defaultScores,
-    tags: r.tags || []
-  })));
+  const inserted = store.insertMany(RECORDS_COL, records.map(r => {
+    const scores = r.scores || defaultScores;
+    const adaptor = calculateAdaptor(r.mbtiType, scores);
+    return {
+      name: r.name, mbtiType: r.mbtiType, ei: r.ei,
+      scores,
+      tags: r.tags || [],
+      adaptor
+    };
+  }));
   res.json({ message: `成功导入 ${inserted.length} 条记录`, count: inserted.length });
 });
 

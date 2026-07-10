@@ -1,6 +1,6 @@
 [
   {
-    "_id": "1783604094019",
+    "_id": "1783655845244",
     "name": "涂馨竹",
     "mbtiType": "ENFJ",
     "ei": "E",
@@ -14,14 +14,22 @@
       "teamwork": 9,
       "challenge": 7
     },
-    "adaptor": "天选共振者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos003",
+      "positionName": "运营支持岗",
+      "icon": "📊",
+      "color": "#10b981",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.263Z"
   },
   {
-    "_id": "1783604094020",
+    "_id": "1783655845245",
     "name": "赵天玉",
     "mbtiType": "ESFJ",
     "ei": "E",
@@ -35,14 +43,22 @@
       "teamwork": 9,
       "challenge": 7
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos003",
+      "positionName": "运营支持岗",
+      "icon": "📊",
+      "color": "#10b981",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.265Z"
   },
   {
-    "_id": "1783604094021",
+    "_id": "1783655845246",
     "name": "王岳宸",
     "mbtiType": "ENFP",
     "ei": "E",
@@ -56,14 +72,22 @@
       "teamwork": 9,
       "challenge": 9
     },
-    "adaptor": "天选共振者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos002",
+      "positionName": "技术研发岗",
+      "icon": "💻",
+      "color": "#3b82f6",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.267Z"
   },
   {
-    "_id": "1783604094022",
+    "_id": "1783655845247",
     "name": "师胜歌",
     "mbtiType": "ESTJ",
     "ei": "E",
@@ -77,14 +101,22 @@
       "teamwork": 6,
       "challenge": 6
     },
+    "tags": [],
     "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 91,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.269Z"
   },
   {
-    "_id": "1783604094023",
+    "_id": "1783655845248",
     "name": "王翰文",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -98,14 +130,22 @@
       "teamwork": 9,
       "challenge": 8
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 88,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.271Z"
   },
   {
-    "_id": "1783604094024",
+    "_id": "1783655845249",
     "name": "朱梓熹",
     "mbtiType": "ESFJ",
     "ei": "E",
@@ -119,14 +159,22 @@
       "teamwork": 4,
       "challenge": 7
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 93,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.272Z"
   },
   {
-    "_id": "1783604094025",
+    "_id": "1783655845250",
     "name": "康宋睿",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -140,14 +188,22 @@
       "teamwork": 7,
       "challenge": 10
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 97,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.274Z"
   },
   {
-    "_id": "1783604094026",
+    "_id": "1783655845251",
     "name": "刘星云",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -161,14 +217,22 @@
       "teamwork": 6,
       "challenge": 8
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.276Z"
   },
   {
-    "_id": "1783604094027",
+    "_id": "1783655845252",
     "name": "康宋睿",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -182,14 +246,22 @@
       "teamwork": 7,
       "challenge": 10
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos004",
+      "positionName": "市场拓展岗",
+      "icon": "🚀",
+      "color": "#f59e0b",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.278Z"
   },
   {
-    "_id": "1783604094028",
+    "_id": "1783655845253",
     "name": "冯可欣",
     "mbtiType": "INFJ",
     "ei": "I",
@@ -203,14 +275,22 @@
       "teamwork": 6,
       "challenge": 5
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 91,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.280Z"
   },
   {
-    "_id": "1783604094029",
+    "_id": "1783655845254",
     "name": "黄琪盛",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -224,14 +304,22 @@
       "teamwork": 6,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 94,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.281Z"
   },
   {
-    "_id": "1783604094030",
+    "_id": "1783655845255",
     "name": "张岚清",
     "mbtiType": "INTP",
     "ei": "I",
@@ -245,14 +333,22 @@
       "teamwork": 7,
       "challenge": 8
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.283Z"
   },
   {
-    "_id": "1783604094031",
+    "_id": "1783655845256",
     "name": "张扬",
     "mbtiType": "ISTP",
     "ei": "I",
@@ -266,14 +362,22 @@
       "teamwork": 5,
       "challenge": 3
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 83,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.284Z"
   },
   {
-    "_id": "1783604094032",
+    "_id": "1783655845257",
     "name": "赵韦豪",
     "mbtiType": "INTP",
     "ei": "I",
@@ -287,14 +391,22 @@
       "teamwork": 8,
       "challenge": 8
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.286Z"
   },
   {
-    "_id": "1783604094033",
+    "_id": "1783655845258",
     "name": "贾博渊",
     "mbtiType": "INFJ",
     "ei": "I",
@@ -308,14 +420,22 @@
       "teamwork": 5,
       "challenge": 8
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.288Z"
   },
   {
-    "_id": "1783604094034",
+    "_id": "1783655845259",
     "name": "罗丹阳",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -329,14 +449,22 @@
       "teamwork": 5,
       "challenge": 5
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 88,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.291Z"
   },
   {
-    "_id": "1783604094035",
+    "_id": "1783655845260",
     "name": "裴启言",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -350,14 +478,22 @@
       "teamwork": 6,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 98,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.293Z"
   },
   {
-    "_id": "1783604094036",
+    "_id": "1783655845261",
     "name": "侯佳希",
     "mbtiType": "ISFJ",
     "ei": "I",
@@ -371,14 +507,22 @@
       "teamwork": 7,
       "challenge": 8
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.295Z"
   },
   {
-    "_id": "1783604094037",
+    "_id": "1783655845262",
     "name": "梁粤",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -392,14 +536,22 @@
       "teamwork": 8,
       "challenge": 7
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos003",
+      "positionName": "运营支持岗",
+      "icon": "📊",
+      "color": "#10b981",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.297Z"
   },
   {
-    "_id": "1783604094038",
+    "_id": "1783655845263",
     "name": "周英杰",
     "mbtiType": "ENTP",
     "ei": "E",
@@ -413,14 +565,22 @@
       "teamwork": 8,
       "challenge": 8
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos003",
+      "positionName": "运营支持岗",
+      "icon": "📊",
+      "color": "#10b981",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.299Z"
   },
   {
-    "_id": "1783604094039",
+    "_id": "1783655845264",
     "name": "于翰琨",
     "mbtiType": "INFP",
     "ei": "I",
@@ -434,14 +594,22 @@
       "teamwork": 7,
       "challenge": 4
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 82,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.302Z"
   },
   {
-    "_id": "1783604094040",
+    "_id": "1783655845265",
     "name": "宋林轩",
     "mbtiType": "ESTP",
     "ei": "E",
@@ -455,14 +623,22 @@
       "teamwork": 6,
       "challenge": 7
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 93,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.304Z"
   },
   {
-    "_id": "1783604094041",
+    "_id": "1783655845266",
     "name": "苏和",
     "mbtiType": "ESFJ",
     "ei": "E",
@@ -476,14 +652,22 @@
       "teamwork": 7,
       "challenge": 9
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos002",
+      "positionName": "技术研发岗",
+      "icon": "💻",
+      "color": "#3b82f6",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.306Z"
   },
   {
-    "_id": "1783604094042",
+    "_id": "1783655845267",
     "name": "刘凯悦",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -497,14 +681,22 @@
       "teamwork": 5,
       "challenge": 5
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos004",
+      "positionName": "市场拓展岗",
+      "icon": "🚀",
+      "color": "#f59e0b",
+      "matchRate": 93,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.308Z"
   },
   {
-    "_id": "1783604094043",
+    "_id": "1783655845268",
     "name": "卢子瑞",
     "mbtiType": "ISFP",
     "ei": "I",
@@ -518,14 +710,22 @@
       "teamwork": 7,
       "challenge": 7
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 98,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.310Z"
   },
   {
-    "_id": "1783604094044",
+    "_id": "1783655845269",
     "name": "严子菁",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -539,14 +739,22 @@
       "teamwork": 7,
       "challenge": 6
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 98,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.312Z"
   },
   {
-    "_id": "1783604094045",
+    "_id": "1783655845270",
     "name": "沈宇炫",
     "mbtiType": "INFJ",
     "ei": "I",
@@ -560,14 +768,22 @@
       "teamwork": 4,
       "challenge": 7
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 94,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.314Z"
   },
   {
-    "_id": "1783604094046",
+    "_id": "1783655845271",
     "name": "黄日铭",
     "mbtiType": "ENFJ",
     "ei": "E",
@@ -581,14 +797,22 @@
       "teamwork": 8,
       "challenge": 8
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos004",
+      "positionName": "市场拓展岗",
+      "icon": "🚀",
+      "color": "#f59e0b",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.315Z"
   },
   {
-    "_id": "1783604094047",
+    "_id": "1783655845272",
     "name": "赵鹤然",
     "mbtiType": "ENFP",
     "ei": "E",
@@ -602,14 +826,22 @@
       "teamwork": 7,
       "challenge": 7
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 98,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.317Z"
   },
   {
-    "_id": "1783604094048",
+    "_id": "1783655845273",
     "name": "韩以亦",
     "mbtiType": "ESTJ",
     "ei": "E",
@@ -623,14 +855,22 @@
       "teamwork": 7,
       "challenge": 5
     },
+    "tags": [],
     "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos008",
+      "positionName": "客户服务岗",
+      "icon": "💬",
+      "color": "#f43f5e",
+      "matchRate": 94,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.320Z"
   },
   {
-    "_id": "1783604094049",
+    "_id": "1783655845274",
     "name": "姚博文",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -644,14 +884,22 @@
       "teamwork": 6,
       "challenge": 10
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.322Z"
   },
   {
-    "_id": "1783604094050",
+    "_id": "1783655845275",
     "name": "薛家琪",
     "mbtiType": "ENFJ",
     "ei": "E",
@@ -665,14 +913,22 @@
       "teamwork": 7,
       "challenge": 7
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 98,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.324Z"
   },
   {
-    "_id": "1783604094051",
+    "_id": "1783655845276",
     "name": "何梓墨",
     "mbtiType": "ENFP",
     "ei": "E",
@@ -686,14 +942,22 @@
       "teamwork": 10,
       "challenge": 10
     },
-    "adaptor": "天选共振者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos003",
+      "positionName": "运营支持岗",
+      "icon": "📊",
+      "color": "#10b981",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.326Z"
   },
   {
-    "_id": "1783604094052",
+    "_id": "1783655845277",
     "name": "秦然",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -707,14 +971,22 @@
       "teamwork": 7,
       "challenge": 7
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.328Z"
   },
   {
-    "_id": "1783604094053",
+    "_id": "1783655845278",
     "name": "张雅萱",
     "mbtiType": "INFP",
     "ei": "I",
@@ -728,14 +1000,22 @@
       "teamwork": 4,
       "challenge": 7
     },
+    "tags": [],
     "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 87,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.330Z"
   },
   {
-    "_id": "1783604094054",
+    "_id": "1783655845279",
     "name": "范欣妍",
     "mbtiType": "ESTJ",
     "ei": "E",
@@ -749,14 +1029,22 @@
       "teamwork": 6,
       "challenge": 5
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos003",
+      "positionName": "运营支持岗",
+      "icon": "📊",
+      "color": "#10b981",
+      "matchRate": 95,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.332Z"
   },
   {
-    "_id": "1783604094055",
+    "_id": "1783655845280",
     "name": "王宇婕",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -770,14 +1058,22 @@
       "teamwork": 10,
       "challenge": 10
     },
-    "adaptor": "天选共振者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos002",
+      "positionName": "技术研发岗",
+      "icon": "💻",
+      "color": "#3b82f6",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.333Z"
   },
   {
-    "_id": "1783604094056",
+    "_id": "1783655845281",
     "name": "郎晨",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -791,14 +1087,22 @@
       "teamwork": 7,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 98,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.336Z"
   },
   {
-    "_id": "1783604094057",
+    "_id": "1783655845282",
     "name": "崔丝桐",
     "mbtiType": "ENFP",
     "ei": "E",
@@ -812,14 +1116,22 @@
       "teamwork": 6,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 95,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.338Z"
   },
   {
-    "_id": "1783604094058",
+    "_id": "1783655845283",
     "name": "李佳旺",
     "mbtiType": "ISTJ",
     "ei": "I",
@@ -833,14 +1145,22 @@
       "teamwork": 7,
       "challenge": 7
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 97,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.340Z"
   },
   {
-    "_id": "1783604094059",
+    "_id": "1783655845284",
     "name": "暴启鑫",
     "mbtiType": "ESTJ",
     "ei": "E",
@@ -854,14 +1174,22 @@
       "teamwork": 6,
       "challenge": 5
     },
+    "tags": [],
     "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 90,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.341Z"
   },
   {
-    "_id": "1783604094060",
+    "_id": "1783655845285",
     "name": "崔云铜",
     "mbtiType": "ESTP",
     "ei": "E",
@@ -875,14 +1203,22 @@
       "teamwork": 9,
       "challenge": 9
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 97,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.344Z"
   },
   {
-    "_id": "1783604094061",
+    "_id": "1783655845286",
     "name": "付俊",
     "mbtiType": "ISFP",
     "ei": "I",
@@ -896,14 +1232,22 @@
       "teamwork": 6,
       "challenge": 5
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 85,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.345Z"
   },
   {
-    "_id": "1783604094062",
+    "_id": "1783655845287",
     "name": "杨鑫龙",
     "mbtiType": "INFJ",
     "ei": "I",
@@ -917,14 +1261,22 @@
       "teamwork": 5,
       "challenge": 5
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 89,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.347Z"
   },
   {
-    "_id": "1783604094063",
+    "_id": "1783655845288",
     "name": "陈子阳",
     "mbtiType": "ENFP",
     "ei": "E",
@@ -938,14 +1290,12 @@
       "teamwork": 0,
       "challenge": 0
     },
+    "tags": [],
     "adaptor": "紧急干预对象",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z"
   },
   {
-    "_id": "1783604094064",
+    "_id": "1783655845289",
     "name": "陈元为",
     "mbtiType": "INTP",
     "ei": "I",
@@ -959,14 +1309,22 @@
       "teamwork": 5,
       "challenge": 6
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 91,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.349Z"
   },
   {
-    "_id": "1783604094065",
+    "_id": "1783655845290",
     "name": "何悦",
     "mbtiType": "ISFP",
     "ei": "I",
@@ -980,14 +1338,22 @@
       "teamwork": 4,
       "challenge": 4
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 75,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.351Z"
   },
   {
-    "_id": "1783604094066",
+    "_id": "1783655845291",
     "name": "张景彬",
     "mbtiType": "INFJ",
     "ei": "I",
@@ -1001,14 +1367,22 @@
       "teamwork": 6,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 95,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.354Z"
   },
   {
-    "_id": "1783604094067",
+    "_id": "1783655845292",
     "name": "杜彦霖",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -1022,14 +1396,22 @@
       "teamwork": 8,
       "challenge": 7
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos003",
+      "positionName": "运营支持岗",
+      "icon": "📊",
+      "color": "#10b981",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.356Z"
   },
   {
-    "_id": "1783604094068",
+    "_id": "1783655845293",
     "name": "丹增日珠",
     "mbtiType": "ENTP",
     "ei": "E",
@@ -1043,14 +1425,22 @@
       "teamwork": 5,
       "challenge": 7
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 95,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.358Z"
   },
   {
-    "_id": "1783604094069",
+    "_id": "1783655845294",
     "name": "李沐泽",
     "mbtiType": "ENFP",
     "ei": "E",
@@ -1064,14 +1454,22 @@
       "teamwork": 9,
       "challenge": 8
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos004",
+      "positionName": "市场拓展岗",
+      "icon": "🚀",
+      "color": "#f59e0b",
+      "matchRate": 100,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.360Z"
   },
   {
-    "_id": "1783604094070",
+    "_id": "1783655845295",
     "name": "刘景昀",
     "mbtiType": "INTP",
     "ei": "I",
@@ -1085,14 +1483,22 @@
       "teamwork": 7,
       "challenge": 3
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 86,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.362Z"
   },
   {
-    "_id": "1783604094071",
+    "_id": "1783655845296",
     "name": "姜奕帆",
     "mbtiType": "ISFJ",
     "ei": "I",
@@ -1106,14 +1512,22 @@
       "teamwork": 4,
       "challenge": 4
     },
-    "adaptor": "紧急干预对象",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "风险警示者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 69,
+      "level": "B",
+      "levelText": "基本匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.364Z"
   },
   {
-    "_id": "1783604094072",
+    "_id": "1783655845297",
     "name": "魏雨霏",
     "mbtiType": "INTP",
     "ei": "I",
@@ -1127,14 +1541,22 @@
       "teamwork": 3,
       "challenge": 3
     },
-    "adaptor": "紧急干预对象",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "风险警示者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 53,
+      "level": "C",
+      "levelText": "待提升"
+    },
+    "updatedAt": "2026-07-10T04:00:44.367Z"
   },
   {
-    "_id": "1783604094073",
+    "_id": "1783655845298",
     "name": "雷景升",
     "mbtiType": "ENTJ",
     "ei": "E",
@@ -1148,14 +1570,22 @@
       "teamwork": 7,
       "challenge": 7
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 98,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.370Z"
   },
   {
-    "_id": "1783604094074",
+    "_id": "1783655845299",
     "name": "杨程轶",
     "mbtiType": "ENFJ",
     "ei": "E",
@@ -1169,14 +1599,22 @@
       "teamwork": 5,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 95,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.372Z"
   },
   {
-    "_id": "1783604094075",
+    "_id": "1783655845300",
     "name": "田盛天",
     "mbtiType": "INTP",
     "ei": "I",
@@ -1190,14 +1628,22 @@
       "teamwork": 3,
       "challenge": 4
     },
-    "adaptor": "紧急干预对象",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "风险警示者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 60,
+      "level": "B",
+      "levelText": "基本匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.374Z"
   },
   {
-    "_id": "1783604094076",
+    "_id": "1783655845301",
     "name": "严子菁",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -1211,14 +1657,22 @@
       "teamwork": 7,
       "challenge": 7
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 97,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.376Z"
   },
   {
-    "_id": "1783604094077",
+    "_id": "1783655845302",
     "name": "忠睿宇鸣",
     "mbtiType": "INTJ",
     "ei": "I",
@@ -1232,14 +1686,22 @@
       "teamwork": 4,
       "challenge": 5
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 81,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.378Z"
   },
   {
-    "_id": "1783604094078",
+    "_id": "1783655845303",
     "name": "贾苏尔",
     "mbtiType": "ENTP",
     "ei": "E",
@@ -1253,14 +1715,22 @@
       "teamwork": 4,
       "challenge": 6
     },
+    "tags": [],
     "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 92,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.380Z"
   },
   {
-    "_id": "1783604094079",
+    "_id": "1783655845304",
     "name": "雷礼霖",
     "mbtiType": "INTP",
     "ei": "I",
@@ -1274,14 +1744,22 @@
       "teamwork": 3,
       "challenge": 6
     },
+    "tags": [],
     "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 67,
+      "level": "B",
+      "levelText": "基本匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.383Z"
   },
   {
-    "_id": "1783604094080",
+    "_id": "1783655845305",
     "name": "宋姝玉",
     "mbtiType": "ESTP",
     "ei": "E",
@@ -1295,14 +1773,22 @@
       "teamwork": 4,
       "challenge": 5
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 75,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.386Z"
   },
   {
-    "_id": "1783604094081",
+    "_id": "1783655845306",
     "name": "周尚泽",
     "mbtiType": "INFP",
     "ei": "I",
@@ -1316,14 +1802,22 @@
       "teamwork": 6,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 95,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.388Z"
   },
   {
-    "_id": "1783604094082",
+    "_id": "1783655845307",
     "name": "张岚清",
     "mbtiType": "INTP",
     "ei": "I",
@@ -1337,14 +1831,22 @@
       "teamwork": 6,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos005",
+      "positionName": "行政管理岗",
+      "icon": "📁",
+      "color": "#ec4899",
+      "matchRate": 97,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.390Z"
   },
   {
-    "_id": "1783604094083",
+    "_id": "1783655845308",
     "name": "胥亦菲",
     "mbtiType": "INFP",
     "ei": "I",
@@ -1358,14 +1860,22 @@
       "teamwork": 4,
       "challenge": 5
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 82,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.392Z"
   },
   {
-    "_id": "1783604094084",
+    "_id": "1783655845309",
     "name": "徐世灵",
     "mbtiType": "ENTP",
     "ei": "E",
@@ -1379,14 +1889,22 @@
       "teamwork": 4,
       "challenge": 6
     },
-    "adaptor": "风险警示者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "可塑协作者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 80,
+      "level": "A",
+      "levelText": "高度匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.394Z"
   },
   {
-    "_id": "1783604094085",
+    "_id": "1783655845310",
     "name": "殷乐其",
     "mbtiType": "ESFP",
     "ei": "E",
@@ -1400,14 +1918,22 @@
       "teamwork": 10,
       "challenge": 10
     },
+    "tags": [],
     "adaptor": "高潜适配者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos006",
+      "positionName": "设计创意岗",
+      "icon": "🎨",
+      "color": "#14b8a6",
+      "matchRate": 96,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.397Z"
   },
   {
-    "_id": "1783604094086",
+    "_id": "1783655845311",
     "name": "朱哲雨",
     "mbtiType": "ENFP",
     "ei": "E",
@@ -1421,10 +1947,18 @@
       "teamwork": 6,
       "challenge": 6
     },
-    "adaptor": "可塑协作者",
-    "tags": [
-      "mbti1"
-    ],
-    "createdAt": "2026-07-09T13:34:54.043Z"
+    "tags": [],
+    "adaptor": "高潜适配者",
+    "createdAt": "2026-07-10T04:00:38.532Z",
+    "assignedPosition": {
+      "positionId": "pos007",
+      "positionName": "数据分析岗",
+      "icon": "📈",
+      "color": "#6366f1",
+      "matchRate": 95,
+      "level": "S",
+      "levelText": "完美匹配"
+    },
+    "updatedAt": "2026-07-10T04:00:44.399Z"
   }
 ]

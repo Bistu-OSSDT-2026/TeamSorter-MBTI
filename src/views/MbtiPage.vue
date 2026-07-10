@@ -222,6 +222,7 @@
           <el-col :span="11" style="text-align:right">
             <el-button type="primary" @click="addRecord" :disabled="!recordForm.name || !recordForm.mbtiType">添加档案</el-button>
             <el-button @click="showImport = true">导入数据</el-button>
+            <el-button type="success" @click="autoAssignPositions">自动分配岗位</el-button>
             <el-button @click="loadRecords">刷新</el-button>
           </el-col>
         </el-row>
@@ -296,7 +297,19 @@
           </el-table-column>
           <el-table-column label="岗位能力适配" width="140">
             <template #default="{ row }">
-              <el-tag size="small" style="margin:2px">{{ row.adaptor || '-' }}</el-tag>
+              <el-tag size="small" :type="getAdaptorTagType(row.adaptor)" style="margin:2px">{{ row.adaptor || '-' }}</el-tag>
+            </template>
+          </el-table-column>
+          <el-table-column label="推荐岗位" width="150">
+            <template #default="{ row }">
+              <div v-if="row.assignedPosition" style="display:flex;align-items:center;gap:4px">
+                <span>{{ row.assignedPosition.icon }}</span>
+                <span style="font-size:12px">{{ row.assignedPosition.positionName }}</span>
+                <el-tag size="mini" :style="{ background: row.assignedPosition.color + '22', color: row.assignedPosition.color }">
+                  {{ row.assignedPosition.matchRate }}%
+                </el-tag>
+              </div>
+              <span v-else style="color:#94a3b8;font-size:12px">-</span>
             </template>
           </el-table-column>
           <el-table-column label="时间" width="140">
@@ -350,13 +363,13 @@
     </div>
 
     <el-dialog v-model="showImport" title="导入数据" width="500px" :close-on-click-modal="false">
-      <el-upload drag action="#" :auto-upload="false" :on-change="handleImport" accept=".csv" :show-file-list="false">
+      <el-upload drag action="#" :auto-upload="false" :on-change="handleImport" accept=".csv,.xlsx,.xls" :show-file-list="false">
         <el-icon class="el-icon--upload" :size="48"><UploadFilled /></el-icon>
-        <div class="el-upload__text">拖拽 CSV 文件到此处，或 <em>点击选择文件</em></div>
+        <div class="el-upload__text">拖拽 Excel 或 CSV 文件到此处，或 <em>点击选择文件</em></div>
         <template #tip>
           <div class="el-upload__tip">
-            <p>CSV 格式要求（首行为列名，UTF-8编码）：</p>
-            <code>姓名,MBTI类型,E/I,沟通表达,社交协助,解决问题,项目管理,学习适应,承担责任意愿,团队贡献意愿,接受挑战意愿,标签</code>
+            <p>支持 .xlsx / .xls / .csv 格式，首行为列名，支持以下列名：</p>
+            <code>姓名, MbTI, 沟通表达, 社交协助, 解决问题, 项目管理, 学习适应, 承担责任意愿, 团队贡献意愿, 接受挑战意愿</code>
           </div>
         </template>
       </el-upload>
@@ -818,6 +831,27 @@ async function deleteRecord(id) {
   }
 }
 
+async function autoAssignPositions() {
+  try {
+    await ElMessageBox.confirm(
+      '确定要为所有人自动分配岗位吗？系统将根据能力匹配度分配最合适的岗位。',
+      '确认自动分配',
+      {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'info'
+      }
+    )
+    const res = await axios.post(`${API}/records/auto-assign-positions`)
+    await loadRecords()
+    ElMessage.success(res.data.message)
+  } catch (e) {
+    if (e !== 'cancel') {
+      ElMessage.error('自动分配失败: ' + (e.response?.data?.error || e.message))
+    }
+  }
+}
+
 async function confirmClearAll() {
   try {
     await ElMessageBox.confirm(
@@ -839,33 +873,86 @@ async function confirmClearAll() {
   }
 }
 
-async function handleImport(file) {
-  importResult.value = ''
-  const text = await file.raw.text()
-  const lines = text.split('\n').filter(l => l.trim())
-  if (lines.length < 2) { importResult.value = '文件格式错误，缺少数据行'; return }
-  const list = []
-  for (let i = 1; i < lines.length; i++) {
-    const cols = lines[i].split(',').map(c => c.trim())
-    if (cols.length < 2) continue
-    const [name, mbtiType, ei, comm, collab, prob, proj, learn, resp, team, chall, ...tags] = cols
-    if (name && mbtiType) {
-      list.push({
-        name, mbtiType, ei: ei || mbtiType[0],
-        scores: {
-          communication: Number(comm) || 0,
-          collaboration: Number(collab) || 0,
-          problemSolving: Number(prob) || 0,
-          projectManagement: Number(proj) || 0,
-          learningAdaptability: Number(learn) || 0,
-          responsibility: Number(resp) || 0,
-          teamwork: Number(team) || 0,
-          challenge: Number(chall) || 0
-        },
-        tags: tags.length ? tags : []
-      })
+async function parseCsvFile(file) {
+  const arrayBuffer = await file.raw.arrayBuffer()
+  let text = new TextDecoder('utf-8').decode(arrayBuffer)
+  if (text.includes('\ufffd') || /[\u0080-\u00ff]/.test(text)) {
+    try {
+      text = new TextDecoder('gbk').decode(arrayBuffer)
+    } catch (e) {
+      try {
+        text = new TextDecoder('gb18030').decode(arrayBuffer)
+      } catch (e2) { /* ignore */ }
     }
   }
+  return text.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+}
+
+function parseRowData(row) {
+  const keys = Object.keys(row)
+  const getName = (r) => { for (const k of keys) { if (k.includes('姓名')) return String(r[k]).trim() } return '' }
+  const getMbti = (r) => { for (const k of keys) { if (k.toLowerCase().includes('mbti')) return String(r[k]).trim().toUpperCase() } return '' }
+  const getScore = (r, key) => { const raw = r[key]; if (raw === undefined || raw === '') return 0; const n = Number(String(raw).trim()); return isNaN(n) ? 0 : n }
+
+  const name = getName(row)
+  const mbtiType = getMbti(row)
+  if (!name || !mbtiType) return null
+
+  const ei = mbtiType[0]
+  return {
+    name,
+    mbtiType,
+    ei,
+    scores: {
+      communication: getScore(row, '沟通表达'),
+      collaboration: getScore(row, '社交协助'),
+      problemSolving: getScore(row, '解决问题'),
+      projectManagement: getScore(row, '项目管理'),
+      learningAdaptability: getScore(row, '学习适应'),
+      responsibility: getScore(row, '承担责任意愿') || getScore(row, '承担责任'),
+      teamwork: getScore(row, '团队贡献意愿') || getScore(row, '团队合作意愿'),
+      challenge: getScore(row, '接受挑战意愿')
+    },
+    tags: []
+  }
+}
+
+async function handleImport(file) {
+  importResult.value = ''
+  const filename = file.name.toLowerCase()
+  let data = []
+
+  try {
+    if (filename.endsWith('.xlsx') || filename.endsWith('.xls')) {
+      const XLSX = await import('xlsx')
+      const arrayBuffer = await file.raw.arrayBuffer()
+      const wb = XLSX.read(arrayBuffer, { type: 'array' })
+      const ws = wb.Sheets[wb.SheetNames[0]]
+      data = XLSX.utils.sheet_to_json(ws, { defval: '' })
+    } else if (filename.endsWith('.csv')) {
+      const text = await parseCsvFile(file)
+      const lines = text.split('\n').filter(l => l.trim())
+      if (lines.length < 2) { importResult.value = '文件格式错误，缺少数据行'; return }
+      const headers = lines[0].split(',').map(h => h.trim())
+      for (let i = 1; i < lines.length; i++) {
+        const cols = lines[i].split(',').map(c => c.trim())
+        const row = {}
+        for (let j = 0; j < headers.length; j++) {
+          row[headers[j]] = cols[j] || ''
+        }
+        data.push(row)
+      }
+    } else {
+      importResult.value = '不支持的文件格式，请上传.xlsx或.csv文件'; return
+    }
+  } catch (e) {
+    importResult.value = '文件解析失败: ' + e.message; return
+  }
+
+  if (!data.length) { importResult.value = '文件为空'; return }
+
+  const list = data.map(parseRowData).filter(Boolean)
+
   if (!list.length) { importResult.value = '没有有效数据行'; return }
   try {
     const res = await axios.post(`${API}/records/import`, { records: list })
